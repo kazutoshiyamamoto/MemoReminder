@@ -102,7 +102,7 @@ class ViewController: UIViewController {
     }
     
     private func request() {
-        let notesManager = notesManager()
+        let notesManager = NotesManager()
         notes = noteManager.get()
         
         countLabel.text = "\(notes.count)Notes"
