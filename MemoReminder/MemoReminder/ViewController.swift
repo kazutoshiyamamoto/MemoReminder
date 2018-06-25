@@ -9,6 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    // ノートに関するプロパティ
+    var notes: [Note] = []
+    
+    // Viewに関わるプロパティ
+    let tableView: UITableView
+    let footerView: UIView
+    let newButton: UIButton
+    let countLabel: UILabel
 
     override func viewDidLoad() {
         super.viewDidLoad()
