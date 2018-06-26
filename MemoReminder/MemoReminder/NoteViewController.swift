@@ -65,5 +65,21 @@ class NoteViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    private func configureNavigationBar() {
+        title = note.id.isEmpty ? "メモ追加" : "メモ編集"
+    }
+    
+    private func addSubviews() {
+        view.addSubview(memoTextView)
+    }
+    
+    private func configureSubviews() {
+        memoTextView.text = note.id.isEmpty ? "" : note.memo
+        memoTextView.becomeFirstResponder()
+    }
 
+    private func addConstraints() {
+        memoTextView.autoPinEdgesToSuperviewEdges()
+    }
 }
