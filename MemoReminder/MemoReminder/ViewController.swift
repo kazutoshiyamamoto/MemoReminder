@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     // ViewControllerのライフサイクル
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         request()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -115,7 +115,39 @@ class ViewController: UIViewController {
         navigationController?.pushViewController(noteViewController, animated: true)
     }
     
-
-
+    // UITableViewDataSource
+    extension ViewController: UITableViewDataSource {
+        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+            let noteViewController = noteViewController(note: notes[indexPath.row])
+            navigationController?.pushViewController(noteViewController, animated true)
+        }
+        
+        func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+            return 48
+        }
+        
+        override func setEditing(editing: Bool, animated: Bool) {
+            super.setEditing = editing
+        }
+        
+        func tableView(tableView: UItableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+            return true
+        }
+        
+        func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+            
+            let notesManager = NotesManager()
+            notesManager.delete(notes[indexPath.row].id)
+            notes.removeAtIndex(indexPath.row)
+            countLabel.text = "\(notes.count) Notes"
+            
+            tableView.deleteRows([indexPath], with: .Fade
+            )
+        }
+        
+    }
+    
+    
+    
 }
 
