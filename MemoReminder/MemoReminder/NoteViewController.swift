@@ -32,6 +32,22 @@ class NoteViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        view.backgroundColor = UIColor.white
+        
+        configureNavigationBar()
+        addSubviews()
+        configureSubviews()
+        addConstrains()
+    }
+    
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        super.willMove(toParentViewController: parent)
+        if parent == nil && !memoTextView.text.isEmpty {
+            let notesManager = NotesManager()
+            note.memo = memoTextView.text
+            notesManager.save(note)
+        }
     }
 
     override func didReceiveMemoryWarning() {
