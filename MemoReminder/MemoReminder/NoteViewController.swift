@@ -15,8 +15,19 @@ class NoteViewController: UIViewController {
     
     let memoTextView: UITextView
     
-
-
+    // イニシャライザ
+    init(
+        note: Note
+        ) {
+        self.note = note
+        self.memoTextView = UITextView.newAutoLayout()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
