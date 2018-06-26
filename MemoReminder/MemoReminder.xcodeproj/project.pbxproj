@@ -13,6 +13,7 @@
 		FD27AC5320DA8059005958FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD27AC5120DA8059005958FF /* Main.storyboard */; };
 		FD27AC5520DA805A005958FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD27AC5420DA805A005958FF /* Assets.xcassets */; };
 		FD27AC5820DA805A005958FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD27AC5620DA805A005958FF /* LaunchScreen.storyboard */; };
+		FDC98AFF20E2131A00F18650 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC98AFE20E2131A00F18650 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FD27AC5420DA805A005958FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD27AC5720DA805A005958FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD27AC5920DA805A005958FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDC98AFE20E2131A00F18650 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				FD27AC4D20DA8059005958FF /* AppDelegate.swift */,
 				FD27AC4F20DA8059005958FF /* ViewController.swift */,
+				FDC98AFE20E2131A00F18650 /* NoteViewController.swift */,
 				FD27AC5120DA8059005958FF /* Main.storyboard */,
 				FD27AC5420DA805A005958FF /* Assets.xcassets */,
 				FD27AC5620DA805A005958FF /* LaunchScreen.storyboard */,
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD27AC5020DA8059005958FF /* ViewController.swift in Sources */,
+				FDC98AFF20E2131A00F18650 /* NoteViewController.swift in Sources */,
 				FD27AC4E20DA8059005958FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,7 +353,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DJ3WL36QU;
 				INFOPLIST_FILE = MemoReminder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.MemoReminder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -365,7 +372,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8DJ3WL36QU;
 				INFOPLIST_FILE = MemoReminder/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Swift-beginners2.MemoReminder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
