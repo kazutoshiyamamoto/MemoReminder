@@ -8,26 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		F3346C9A74F48AD0A254C1D7 /* Pods_MemoReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E938049B87AE0F38B94C94 /* Pods_MemoReminder.framework */; };
+		FD1CA7EF20E497B200421A7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CA7ED20E497B200421A7E /* ViewController.swift */; };
+		FD1CA7F020E497B200421A7E /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CA7EE20E497B200421A7E /* NoteViewController.swift */; };
+		FD1CA7F420E4988100421A7E /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CA7F320E4988100421A7E /* note.swift */; };
 		FD27AC4E20DA8059005958FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27AC4D20DA8059005958FF /* AppDelegate.swift */; };
-		FD27AC5020DA8059005958FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27AC4F20DA8059005958FF /* ViewController.swift */; };
 		FD27AC5320DA8059005958FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD27AC5120DA8059005958FF /* Main.storyboard */; };
 		FD27AC5520DA805A005958FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD27AC5420DA805A005958FF /* Assets.xcassets */; };
 		FD27AC5820DA805A005958FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD27AC5620DA805A005958FF /* LaunchScreen.storyboard */; };
-		FDC98AFF20E2131A00F18650 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC98AFE20E2131A00F18650 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		96FD56C205FDED51904DD441 /* Pods-MemoReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoReminder.release.xcconfig"; path = "Pods/Target Support Files/Pods-MemoReminder/Pods-MemoReminder.release.xcconfig"; sourceTree = "<group>"; };
 		A227FA557E3C29E019CDB010 /* Pods-MemoReminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoReminder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MemoReminder/Pods-MemoReminder.debug.xcconfig"; sourceTree = "<group>"; };
 		D8E938049B87AE0F38B94C94 /* Pods_MemoReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD1CA7ED20E497B200421A7E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FD1CA7EE20E497B200421A7E /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		FD1CA7F320E4988100421A7E /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
 		FD27AC4A20DA8059005958FF /* MemoReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD27AC4D20DA8059005958FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD27AC4F20DA8059005958FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD27AC5220DA8059005958FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD27AC5420DA805A005958FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD27AC5720DA805A005958FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD27AC5920DA805A005958FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDC98AFE20E2131A00F18650 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FD1CA7E920E4976900421A7E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FD1CA7F320E4988100421A7E /* note.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FD1CA7EB20E4979800421A7E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Application;
+			path = MemoReminder/Application;
+			sourceTree = SOURCE_ROOT;
+		};
+		FD1CA7EC20E497B200421A7E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FD1CA7ED20E497B200421A7E /* ViewController.swift */,
+				FD1CA7EE20E497B200421A7E /* NoteViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		FD27AC4120DA8059005958FF = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				FD27AC4D20DA8059005958FF /* AppDelegate.swift */,
-				FD27AC4F20DA8059005958FF /* ViewController.swift */,
-				FDC98AFE20E2131A00F18650 /* NoteViewController.swift */,
+				FD1CA7EC20E497B200421A7E /* UI */,
+				FD1CA7EB20E4979800421A7E /* Application */,
+				FD1CA7E920E4976900421A7E /* Components */,
 				FD27AC5120DA8059005958FF /* Main.storyboard */,
 				FD27AC5420DA805A005958FF /* Assets.xcassets */,
 				FD27AC5620DA805A005958FF /* LaunchScreen.storyboard */,
@@ -203,9 +231,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD27AC5020DA8059005958FF /* ViewController.swift in Sources */,
-				FDC98AFF20E2131A00F18650 /* NoteViewController.swift in Sources */,
+				FD1CA7EF20E497B200421A7E /* ViewController.swift in Sources */,
+				FD1CA7F020E497B200421A7E /* NoteViewController.swift in Sources */,
 				FD27AC4E20DA8059005958FF /* AppDelegate.swift in Sources */,
+				FD1CA7F420E4988100421A7E /* note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
