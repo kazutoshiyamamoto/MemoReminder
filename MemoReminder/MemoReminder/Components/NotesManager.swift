@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-class NoteManager {
+class NotesManager {
     let userDefaults = UserDefaults.standard
     let userDefaultKey = "notes"
     

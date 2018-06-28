@@ -11,7 +11,7 @@
 		FD1CA7EF20E497B200421A7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CA7ED20E497B200421A7E /* ViewController.swift */; };
 		FD1CA7F020E497B200421A7E /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CA7EE20E497B200421A7E /* NoteViewController.swift */; };
 		FD1CA7F420E4988100421A7E /* note.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CA7F320E4988100421A7E /* note.swift */; };
-		FD1CA7F620E4999300421A7E /* NoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CA7F520E4999300421A7E /* NoteManager.swift */; };
+		FD1CA7F620E4999300421A7E /* NotesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CA7F520E4999300421A7E /* NotesManager.swift */; };
 		FD1CA7F820E4A98500421A7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1CA7F720E4A98500421A7E /* AppDelegate.swift */; };
 		FD1CA7FA20E4A99800421A7E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD1CA7F920E4A99800421A7E /* Info.plist */; };
 		FD1CA7FC20E4A9A200421A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD1CA7FB20E4A9A200421A7E /* Assets.xcassets */; };
@@ -27,7 +27,7 @@
 		FD1CA7ED20E497B200421A7E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD1CA7EE20E497B200421A7E /* NoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		FD1CA7F320E4988100421A7E /* note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = note.swift; sourceTree = "<group>"; };
-		FD1CA7F520E4999300421A7E /* NoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteManager.swift; sourceTree = "<group>"; };
+		FD1CA7F520E4999300421A7E /* NotesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesManager.swift; sourceTree = "<group>"; };
 		FD1CA7F720E4A98500421A7E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD1CA7F920E4A99800421A7E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD1CA7FB20E4A9A200421A7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				FD1CA7F320E4988100421A7E /* note.swift */,
-				FD1CA7F520E4999300421A7E /* NoteManager.swift */,
+				FD1CA7F520E4999300421A7E /* NotesManager.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -81,8 +81,8 @@
 				FD1CA7FB20E4A9A200421A7E /* Assets.xcassets */,
 				FD1CA7FD20E4A9AA00421A7E /* Base.lproj */,
 				FD1CA7F720E4A98500421A7E /* AppDelegate.swift */,
-				FD1CA7F920E4A99800421A7E /* Info.plist */,
 				FD1CA80420E4AA0100421A7E /* main.swift */,
+				FD1CA7F920E4A99800421A7E /* Info.plist */,
 			);
 			name = Application;
 			path = MemoReminder/Application;
@@ -249,7 +249,7 @@
 			files = (
 				FD1CA7F820E4A98500421A7E /* AppDelegate.swift in Sources */,
 				FD1CA80520E4AA0100421A7E /* main.swift in Sources */,
-				FD1CA7F620E4999300421A7E /* NoteManager.swift in Sources */,
+				FD1CA7F620E4999300421A7E /* NotesManager.swift in Sources */,
 				FD1CA7EF20E497B200421A7E /* ViewController.swift in Sources */,
 				FD1CA7F020E497B200421A7E /* NoteViewController.swift in Sources */,
 				FD1CA7F420E4988100421A7E /* note.swift in Sources */,

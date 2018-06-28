@@ -22,12 +22,12 @@ class ViewController: UIViewController {
     
     // イニシャライザ
     init() {
-        self.tableView = UITableView.newAutoLayoutView()
-        self.footerView = UIView.newAutoLayoutView()
+        self.tableView = UITableView.newAutoLayout()
+        self.footerView = UIView.newAutoLayout()
         self.newButton = UIButton(type: .system)
         // AutoLayout解除
         self.newButton.translatesAutoresizingMaskIntoConstraints = false
-        self.countLabel = UILabel.newAutoLayoutView()
+        self.countLabel = UILabel.newAutoLayout()
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        view.backgroundColor = UIColor.whiteColor
+        view.backgroundColor = UIColor.white
         
         configureNavigationBar()
         addSubviews()
@@ -86,24 +86,24 @@ class ViewController: UIViewController {
         newButton.addTarget(self, action: #selector(didTapNewButton(_:)), for: .touchUpInside)
     }
     
-    private func addConstrains() {
+    private func addConstraints() {
         tableView.autoPinEdgesToSuperviewEdges()
         
-        footerView.autoPinEdgesToSuperviewEdges(.Left)
-        footerView.autoPinEdgesToSuperviewEdges(.Right)
-        footerView..autoPinEdgesToSuperviewEdges(.Button)
+        footerView.autoPinEdgesToSuperviewEdges(.left)
+        footerView.autoPinEdgesToSuperviewEdges(.right)
+        footerView.autoPinEdgesToSuperviewEdges(.Button)
         footerView.autoSetDimension(.height, toSize: 48)
         
-        countLabel.autoAlignAxisToSuperviewAxis(.Vertical)
-        countLabel.autoAlignAxisToSuperviewAxis(.Horizontal)
+        countLabel.autoAlignAxis(toSuperviewAxis: .vertical)
+        countLabel.autoAlignAxis(toSuperviewAxis: .horizontal)
         
-        newButton.autoPinEdgeToSuperviewEdge(.Right, withInset: 10)
-        newButton.autoAlignAxisToSuperviewAxis(.Horizontal)
+        newButton.autoPinEdge(toSuperviewEdge: .right, withInset: 10)
+        newButton.autoAlignAxis(toSuperviewAxis: .horizontal)
     }
     
     private func request() {
         let notesManager = NotesManager()
-        notes = noteManager.get()
+        notes = notesManager.get()
         
         countLabel.text = "\(notes.count)Notes"
         
@@ -117,9 +117,28 @@ class ViewController: UIViewController {
     
     // UITableViewDataSource
     extension ViewController: UITableViewDataSource {
+        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return notes.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(
+        style: UITableViewCellStyle.subtitle,
+        reuseIdentifier: "Cell")
+        
+        cell.textLabel?.text = notes[indexPath.row].memo
+        cell.detailTextLabel?.textColor = UIColor(white: 0.1, alpha: 0.3)
+        cell.detailTextLabel?.text = notes[indexPath.row].id
+        
+        return cell
+    }
+    }
+    
+    // UITableViewDelegate
+    extension ViewController: UITableViewDelegate {
         func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-            let noteViewController = noteViewController(note: notes[indexPath.row])
-            navigationController?.pushViewController(noteViewController, animated true)
+            let noteViewController = NoteViewController(note: notes[indexPath.row])
+            navigationController?.pushViewController(noteViewController, animated: true)
         }
         
         func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -127,10 +146,11 @@ class ViewController: UIViewController {
         }
         
         override func setEditing(editing: Bool, animated: Bool) {
-            super.setEditing = editing
+            super.setEditing(editing, animated: animated)
+            tableView.editing = editing
         }
         
-        func tableView(tableView: UItableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
             return true
         }
         
@@ -141,13 +161,9 @@ class ViewController: UIViewController {
             notes.removeAtIndex(indexPath.row)
             countLabel.text = "\(notes.count) Notes"
             
-            tableView.deleteRows([indexPath], with: .Fade
+            tableView.deleteRows(at: [indexPath as IndexPath], with: .fade
             )
         }
-        
     }
-    
-    
-    
 }
 
